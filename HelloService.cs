@@ -13,9 +13,13 @@ namespace APIServiceStack2014
         /// </summary>
         /// <param name="request"></param>
         /// <returns></returns>
-        public object Any(Hello request)
+        public object Get(Hello request)
         {
-            return new HelloResponse { Result = "Hoooolaaaa, " + request.Name };
+            String resultado = String.Empty;
+
+            resultado = request.Name;
+
+            return new HelloResponse { Result = "Hoooolaaaa, " + resultado };
         }
     }
 }

@@ -6,8 +6,8 @@ using ServiceStack;
 
 namespace APIServiceStack2014
 {
-    [Route("/hello")]
-    [Route("/hello/{Name}")]
+    [Route("/Hello")]
+    [Route("/Hello/{Name}")]
     public class Hello
     {
         public string Name { get; set; }

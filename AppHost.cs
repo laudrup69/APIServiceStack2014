@@ -18,7 +18,10 @@ namespace APIServiceStack2014
 
         public override void Configure(Funq.Container container)
         {
-            //throw new NotImplementedException();
+            // register user-defined REST-ful urls (Optional)
+            Routes
+                .Add<Hello>("/hello")
+                .Add<Hello>("/hello/{Name}");
         }
     }
 }
