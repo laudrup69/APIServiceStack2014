@@ -2,7 +2,7 @@
 <#
 	// Settings
 	ConnectionStringName = "";			// Uses last connection string in config if not specified
-	Namespace = "";
+	Namespace = "APIServiceStack2014.POCO";
 	ClassPrefix = "";
 	ClassSuffix = "";
 	bool SplitIntoMultipleFiles = true;		// if true: Generates one file for every class

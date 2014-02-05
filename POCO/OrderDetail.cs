@@ -15,17 +15,25 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Miembros")]
-    public partial class Miembro : IHasId<long> 
+	[Alias("OrderDetails")]
+    public partial class OrderDetail : IHasId<string> 
     {
         [Alias("Id")]
-        public long? Id { get; set;}
-        [StringLength(50)]
-        public string Nombre { get; set;}
-        [StringLength(100)]
-        public string Apellidos { get; set;}
+        [StringLength(8000)]
+        public string Id { get; set;}
+        [Required]
+        public long OrderId { get; set;}
+        [Required]
+        public long ProductId { get; set;}
+        [Required]
+        public decimal UnitPrice { get; set;}
+        [Required]
+        public long Quantity { get; set;}
+        [Required]
+        public double Discount { get; set;}
+        public DateTime? LastUpdated { get; set;}
     }
 }
 #pragma warning restore 1591

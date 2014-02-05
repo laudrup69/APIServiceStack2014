@@ -48,7 +48,7 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
 }
 #pragma warning restore 1591

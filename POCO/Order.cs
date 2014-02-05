@@ -15,34 +15,38 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Customers")]
-    public partial class Customer : IHasId<string> 
+	[Alias("Orders")]
+    public partial class Order : IHasId<long> 
     {
         [Alias("Id")]
+        public long? Id { get; set;}
         [StringLength(8000)]
-        public string Id { get; set;}
+        public string CustomerId { get; set;}
+        [Required]
+        public long EmployeeId { get; set;}
         [StringLength(8000)]
-        public string CompanyName { get; set;}
+        public string OrderDate { get; set;}
         [StringLength(8000)]
-        public string ContactName { get; set;}
+        public string RequiredDate { get; set;}
         [StringLength(8000)]
-        public string ContactTitle { get; set;}
+        public string ShippedDate { get; set;}
+        public long? ShipVia { get; set;}
+        [Required]
+        public decimal Freight { get; set;}
         [StringLength(8000)]
-        public string Address { get; set;}
+        public string ShipName { get; set;}
         [StringLength(8000)]
-        public string City { get; set;}
+        public string ShipAddress { get; set;}
         [StringLength(8000)]
-        public string Region { get; set;}
+        public string ShipCity { get; set;}
         [StringLength(8000)]
-        public string PostalCode { get; set;}
+        public string ShipRegion { get; set;}
         [StringLength(8000)]
-        public string Country { get; set;}
+        public string ShipPostalCode { get; set;}
         [StringLength(8000)]
-        public string Phone { get; set;}
-        [StringLength(8000)]
-        public string Fax { get; set;}
+        public string ShipCountry { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

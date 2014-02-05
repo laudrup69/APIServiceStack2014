@@ -15,25 +15,19 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Employees")]
-    public partial class Employee : IHasId<long> 
+	[Alias("Suppliers")]
+    public partial class Supplier : IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string LastName { get; set;}
+        public string CompanyName { get; set;}
         [StringLength(8000)]
-        public string FirstName { get; set;}
+        public string ContactName { get; set;}
         [StringLength(8000)]
-        public string Title { get; set;}
-        [StringLength(8000)]
-        public string TitleOfCourtesy { get; set;}
-        [StringLength(8000)]
-        public string BirthDate { get; set;}
-        [StringLength(8000)]
-        public string HireDate { get; set;}
+        public string ContactTitle { get; set;}
         [StringLength(8000)]
         public string Address { get; set;}
         [StringLength(8000)]
@@ -45,15 +39,11 @@ namespace ManHouse
         [StringLength(8000)]
         public string Country { get; set;}
         [StringLength(8000)]
-        public string HomePhone { get; set;}
+        public string Phone { get; set;}
         [StringLength(8000)]
-        public string Extension { get; set;}
-        public string Photo { get; set;}
+        public string Fax { get; set;}
         [StringLength(8000)]
-        public string Notes { get; set;}
-        public long? ReportsTo { get; set;}
-        [StringLength(8000)]
-        public string PhotoPath { get; set;}
+        public string HomePage { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

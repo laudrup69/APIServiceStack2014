@@ -15,31 +15,17 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Products")]
-    public partial class Product : IHasId<long> 
+	[Alias("Shippers")]
+    public partial class Shipper : IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string ProductName { get; set;}
-        [Required]
-        public long SupplierId { get; set;}
-        [Required]
-        public long CategoryId { get; set;}
+        public string CompanyName { get; set;}
         [StringLength(8000)]
-        public string QuantityPerUnit { get; set;}
-        [Required]
-        public decimal UnitPrice { get; set;}
-        [Required]
-        public long UnitsInStock { get; set;}
-        [Required]
-        public long UnitsOnOrder { get; set;}
-        [Required]
-        public long ReorderLevel { get; set;}
-        [Required]
-        public long Discontinued { get; set;}
+        public string Phone { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

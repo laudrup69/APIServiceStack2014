@@ -15,13 +15,14 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Suppliers")]
-    public partial class Supplier : IHasId<long> 
+	[Alias("Customers")]
+    public partial class Customer : IHasId<string> 
     {
         [Alias("Id")]
-        public long? Id { get; set;}
+        [StringLength(8000)]
+        public string Id { get; set;}
         [StringLength(8000)]
         public string CompanyName { get; set;}
         [StringLength(8000)]
@@ -42,8 +43,6 @@ namespace ManHouse
         public string Phone { get; set;}
         [StringLength(8000)]
         public string Fax { get; set;}
-        [StringLength(8000)]
-        public string HomePage { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

@@ -15,7 +15,7 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
 	[Alias("Territories")]
     public partial class Territory : IHasId<string> 

@@ -15,17 +15,15 @@ using ServiceStack.OrmLite;
 using ServiceStack.DataAnnotations;
 using ServiceStack.Model;
 
-namespace ManHouse
+namespace APIServiceStack2014.POCO
 {
-	[Alias("Categories")]
-    public partial class Category : IHasId<long> 
+	[Alias("Regions")]
+    public partial class Region : IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string CategoryName { get; set;}
-        [StringLength(8000)]
-        public string Description { get; set;}
+        public string RegionDescription { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }
