@@ -17,36 +17,33 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Orders")]
-    public partial class Order : IHasId<long> 
+	[Alias("Suppliers")]
+    public partial class SupplierPOCO : IPOCO, IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string CustomerId { get; set;}
-        [Required]
-        public long EmployeeId { get; set;}
+        public string CompanyName { get; set;}
         [StringLength(8000)]
-        public string OrderDate { get; set;}
+        public string ContactName { get; set;}
         [StringLength(8000)]
-        public string RequiredDate { get; set;}
+        public string ContactTitle { get; set;}
         [StringLength(8000)]
-        public string ShippedDate { get; set;}
-        public long? ShipVia { get; set;}
-        [Required]
-        public decimal Freight { get; set;}
+        public string Address { get; set;}
         [StringLength(8000)]
-        public string ShipName { get; set;}
+        public string City { get; set;}
         [StringLength(8000)]
-        public string ShipAddress { get; set;}
+        public string Region { get; set;}
         [StringLength(8000)]
-        public string ShipCity { get; set;}
+        public string PostalCode { get; set;}
         [StringLength(8000)]
-        public string ShipRegion { get; set;}
+        public string Country { get; set;}
         [StringLength(8000)]
-        public string ShipPostalCode { get; set;}
+        public string Phone { get; set;}
         [StringLength(8000)]
-        public string ShipCountry { get; set;}
+        public string Fax { get; set;}
+        [StringLength(8000)]
+        public string HomePage { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

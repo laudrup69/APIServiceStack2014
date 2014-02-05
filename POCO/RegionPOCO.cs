@@ -17,29 +17,13 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Products")]
-    public partial class Product : IHasId<long> 
+	[Alias("Regions")]
+    public partial class RegionPOCO : IPOCO, IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string ProductName { get; set;}
-        [Required]
-        public long SupplierId { get; set;}
-        [Required]
-        public long CategoryId { get; set;}
-        [StringLength(8000)]
-        public string QuantityPerUnit { get; set;}
-        [Required]
-        public decimal UnitPrice { get; set;}
-        [Required]
-        public long UnitsInStock { get; set;}
-        [Required]
-        public long UnitsOnOrder { get; set;}
-        [Required]
-        public long ReorderLevel { get; set;}
-        [Required]
-        public long Discontinued { get; set;}
+        public string RegionDescription { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

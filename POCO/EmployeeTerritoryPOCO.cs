@@ -17,16 +17,16 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Territories")]
-    public partial class Territory : IHasId<string> 
+	[Alias("EmployeeTerritories")]
+    public partial class EmployeeTerritoryPOCO : IPOCO, IHasId<string> 
     {
         [Alias("Id")]
         [StringLength(8000)]
         public string Id { get; set;}
-        [StringLength(8000)]
-        public string TerritoryDescription { get; set;}
         [Required]
-        public long RegionId { get; set;}
+        public long EmployeeId { get; set;}
+        [StringLength(8000)]
+        public string TerritoryId { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

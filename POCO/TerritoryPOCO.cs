@@ -17,15 +17,16 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Shippers")]
-    public partial class Shipper : IHasId<long> 
+	[Alias("Territories")]
+    public partial class TerritoryPOCO : IPOCO, IHasId<string> 
     {
         [Alias("Id")]
-        public long? Id { get; set;}
         [StringLength(8000)]
-        public string CompanyName { get; set;}
+        public string Id { get; set;}
         [StringLength(8000)]
-        public string Phone { get; set;}
+        public string TerritoryDescription { get; set;}
+        [Required]
+        public long RegionId { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }

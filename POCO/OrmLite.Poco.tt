@@ -4,7 +4,7 @@
 	ConnectionStringName = "";			// Uses last connection string in config if not specified
 	Namespace = "APIServiceStack2014.POCO";
 	ClassPrefix = "";
-	ClassSuffix = "";
+	ClassSuffix = "POCO";
 	bool SplitIntoMultipleFiles = true;		// if true: Generates one file for every class
 	bool MakeSingular = true;			// if true: Changes the classname to singular if tablename is not singular
 	bool UseIdAsPK = true;				// if true: Changes the primary key property name to Id
@@ -59,7 +59,7 @@ manager.StartNewFile(tbl.ClassName + ".cs");
 <# if (MakeSingular) {#>
 	[Alias("<#=tbl.Name#>")]
 <#}#>
-    public partial class <#=tbl.ClassName#><#if (tbl.HasPK() && UseIdAsPK) { #> : IHasId<<#=tbl.PK.PropertyType#>><#}#> 
+    public partial class <#=tbl.ClassName#><#if (tbl.HasPK() && UseIdAsPK) { #> : IPOCO, IHasId<<#=tbl.PK.PropertyType#>><#}#> 
     {
 <# if (GenerateConstructor) { #>
 		public <#=tbl.ClassName#>()

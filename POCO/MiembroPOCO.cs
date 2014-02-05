@@ -17,14 +17,15 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Regions")]
-    public partial class Region : IHasId<long> 
+	[Alias("Miembros")]
+    public partial class MiembroPOCO : IPOCO, IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
-        [StringLength(8000)]
-        public string RegionDescription { get; set;}
-        public DateTime? LastUpdated { get; set;}
+        [StringLength(50)]
+        public string Nombre { get; set;}
+        [StringLength(100)]
+        public string Apellidos { get; set;}
     }
 }
 #pragma warning restore 1591

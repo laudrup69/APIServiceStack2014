@@ -17,17 +17,23 @@ using ServiceStack.Model;
 
 namespace APIServiceStack2014.POCO
 {
-	[Alias("Suppliers")]
-    public partial class Supplier : IHasId<long> 
+	[Alias("Employees")]
+    public partial class EmployeePOCO : IPOCO, IHasId<long> 
     {
         [Alias("Id")]
         public long? Id { get; set;}
         [StringLength(8000)]
-        public string CompanyName { get; set;}
+        public string LastName { get; set;}
         [StringLength(8000)]
-        public string ContactName { get; set;}
+        public string FirstName { get; set;}
         [StringLength(8000)]
-        public string ContactTitle { get; set;}
+        public string Title { get; set;}
+        [StringLength(8000)]
+        public string TitleOfCourtesy { get; set;}
+        [StringLength(8000)]
+        public string BirthDate { get; set;}
+        [StringLength(8000)]
+        public string HireDate { get; set;}
         [StringLength(8000)]
         public string Address { get; set;}
         [StringLength(8000)]
@@ -39,11 +45,15 @@ namespace APIServiceStack2014.POCO
         [StringLength(8000)]
         public string Country { get; set;}
         [StringLength(8000)]
-        public string Phone { get; set;}
+        public string HomePhone { get; set;}
         [StringLength(8000)]
-        public string Fax { get; set;}
+        public string Extension { get; set;}
+        public string Photo { get; set;}
         [StringLength(8000)]
-        public string HomePage { get; set;}
+        public string Notes { get; set;}
+        public long? ReportsTo { get; set;}
+        [StringLength(8000)]
+        public string PhotoPath { get; set;}
         public DateTime? LastUpdated { get; set;}
     }
 }
