@@ -26,7 +26,7 @@
 // 
 //     Connection String Name: `ManHouse`
 //     Provider:               `System.Data.SQLite`
-//     Connection String:      `Data Source=C:\MiCarpeta\PUNTONET\HOMEVISUAL\GitHub\APIServiceStack2014\BD\ManHouse.sqlite`
+//     Connection String:      `Data Source=..\BD\ManHouse.sqlite`
 //     Schema:                 ``
 //     Include Views:          `False`
 
