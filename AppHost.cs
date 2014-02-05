@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Configuration;
 using ServiceStack;
+using ServiceStack.Text;
+using ServiceStack.Data;
+using ServiceStack.OrmLite;
 
 namespace APIServiceStack2014
 {
@@ -22,6 +26,19 @@ namespace APIServiceStack2014
             Routes
                 .Add<Hello>("/hello")
                 .Add<Hello>("/hello/{Name}");
+
+            //JSON
+            JsConfig.EmitCamelCaseNames = true;
+            JsConfig.IncludeNullValues = false;
+            JsConfig.DateHandler = DateHandler.ISO8601;
+            JsConfig.EscapeUnicode = true;
+
+
+            //container.Register<IDbConnectionFactory>(c =>
+            //    new OrmLiteConnectionFactory(ConfigurationManager.ConnectionStrings["ManHouse"].ConnectionString, SqliteDialect.Provider));
+            //container.RegisterAutoWired<Repository>().ReusedWithin(ReuseScope.None);
+            var dbfactory = new OrmLiteConnectionFactory(ConfigurationManager.ConnectionStrings["ManHouse"].ConnectionString, SqliteDialect.Provider);
+            container.Register<IDbConnectionFactory>(dbfactory);
         }
     }
 }

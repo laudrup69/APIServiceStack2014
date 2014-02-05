@@ -8,7 +8,7 @@ namespace APIServiceStack2014
 {
     [Route("/Hello")]
     [Route("/Hello/{Name}")]
-    public class Hello
+    public class Hello : IReturn<HelloResponse>
     {
         public string Name { get; set; }
     }
